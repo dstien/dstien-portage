@@ -47,9 +47,9 @@ RDEPEND="
 	media-libs/fontconfig
 	media-libs/freetype
 	media-libs/glitz
-	media-libs/gst-plugins-ogg
-	media-libs/gst-plugins-theora
-	media-libs/gst-plugins-vorbis
+	media-plugins/gst-plugins-ogg
+	media-plugins/gst-plugins-theora
+	media-plugins/gst-plugins-vorbis
 	media-libs/libpng
 	sys-apps/util-linux
 	sys-libs/zlib
