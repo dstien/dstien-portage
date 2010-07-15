@@ -10,16 +10,16 @@ HOMEPAGE="http://www.spotify.com/"
 LICENSE="Spotify"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gtk"
+IUSE="gnome"
 
 MY_PV="${PV}.g9b4fb29-1"
 MY_P="${PN}-client-qt_${MY_PV}"
 
 SRC_BASE="http://repository.spotify.com/pool/non-free/${PN:0:1}/${PN}/"
 SRC_URI="
-	x86? ( ${SRC_BASE}${MY_P}_i386.deb )
+	x86?   ( ${SRC_BASE}${MY_P}_i386.deb )
 	amd64? ( ${SRC_BASE}${MY_P}_amd64.deb )
-	gtk? ( ${SRC_BASE}${PN}-client-gnome-support_${MY_PV}_all.deb )
+	gnome? ( ${SRC_BASE}${PN}-client-gnome-support_${MY_PV}_all.deb )
 	"
 
 RDEPEND="
