@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gnome"
 
-MY_PV="${PV}.g8518eab-1"
+MY_PV="${PV}.g1df0858-1"
 MY_P="${PN}-client-qt_${MY_PV}"
 
 SRC_BASE="http://repository.spotify.com/pool/non-free/${PN:0:1}/${PN}/"
