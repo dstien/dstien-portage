@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gnome"
 
-MY_PV="${PV}.g1df0858-1"
+MY_PV="${PV}.g604b4fb-1"
 MY_P="${PN}-client-qt_${MY_PV}"
 
 SRC_BASE="http://repository.spotify.com/pool/non-free/${PN:0:1}/${PN}/"
@@ -23,7 +23,6 @@ SRC_URI="
 	"
 
 RDEPEND="
-	media-sound/pulseaudio
 	>=media-libs/alsa-lib-1.0.14
 	>=sys-devel/gcc-4.0
 	>=sys-libs/glibc-2.6
