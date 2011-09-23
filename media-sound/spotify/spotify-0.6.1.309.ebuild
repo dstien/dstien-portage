@@ -12,14 +12,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gnome"
 
-MY_PV="${PV}.g6d797eb-1"
+MY_PV="${PV}.gb871a7d-1"
 MY_P="${PN}-client-qt_${MY_PV}"
 
 SRC_BASE="http://repository.spotify.com/pool/non-free/${PN:0:1}/${PN}/"
 SRC_URI="
 	x86?   ( ${SRC_BASE}${MY_P}_i386.deb )
 	amd64? ( ${SRC_BASE}${MY_P}_amd64.deb )
-	gnome? ( ${SRC_BASE}${PN}-client-gnome-support_${MY_PV}_all.deb )
+	gnome? ( ${SRC_BASE}${PN}-client-gnome-support_0.5.2.84.g6d797eb-1_all.deb )
 	"
 
 RDEPEND="
