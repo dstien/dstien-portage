@@ -23,6 +23,7 @@ SRC_URI="
 	"
 
 RDEPEND="
+	dev-libs/openssl:0.9.8
 	>=media-libs/alsa-lib-1.0.14
 	>=sys-devel/gcc-4.0
 	>=sys-libs/glibc-2.6
