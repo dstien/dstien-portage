@@ -10,9 +10,11 @@
 EAPI=5
 inherit eutils fdo-mime gnome2-utils unpacker
 
+MY_PV="${PV/_/-}"
+
 DESCRIPTION="Music production and performance system"
 HOMEPAGE="http://bitwig.com/"
-SRC_URI="http://packs.bitwig.com/downloads/${P}.deb"
+SRC_URI="http://packs.bitwig.com/downloads/${PN}-${MY_PV^^}.deb"
 LICENSE="Bitwig"
 SLOT="0"
 KEYWORDS="~amd64"
