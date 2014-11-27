@@ -35,7 +35,7 @@ RDEPEND="${DEPEND}
 		sys-devel/gcc
 		sys-libs/glibc
 		sys-libs/zlib
-		x11-libs/cairo
+		x11-libs/cairo[xcb]
 		x11-libs/libX11
 		x11-libs/libXau
 		x11-libs/libXcursor
