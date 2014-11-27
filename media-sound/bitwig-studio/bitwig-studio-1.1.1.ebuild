@@ -18,6 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="mirror strip"
 
+IUSE="libav"
+
 DEPEND=""
 RDEPEND="${DEPEND}
 		app-arch/bzip2
@@ -29,7 +31,7 @@ RDEPEND="${DEPEND}
 		media-libs/libpng:0/16
 		media-libs/mesa
 		media-sound/jack-audio-connection-kit
-		media-video/libav
+		libav? ( media-video/libav )
 		sys-devel/gcc
 		sys-libs/glibc
 		sys-libs/zlib
@@ -90,6 +92,11 @@ pkg_postinst() {
 	gnome2_icon_cache_update
 	fdo-mime_mime_database_update
 	fdo-mime_desktop_database_update
+
+	if ! use libav; then
+		einfo "libav use flag not set. Bitwig Studio require the avprobe and avconv tools"
+		einfo "for importing audio files."
+	fi
 }
 
 pkg_postrm() {
