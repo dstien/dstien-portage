@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.18.1.ebuild,v 1.5 2014/08/10 20:01:55 slyfox Exp $
+# $Header: $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ inherit multilib versionator wxwidgets
 
 DESCRIPTION="wxWidgets GUI for PostgreSQL"
 HOMEPAGE="http://www.pgadmin.org/"
-SRC_URI="mirror://postgresql/${PN}/release/v${PV/_/-}/src/${P/_/-}.tar.gz"
+SRC_URI="mirror://postgresql/${PN}/release/v${PV}/src/${P}.tar.gz"
 
 LICENSE="POSTGRESQL"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
@@ -18,7 +18,7 @@ SLOT="0"
 IUSE="debug +databasedesigner"
 
 DEPEND="x11-libs/wxGTK:2.8[X,debug=]
-	>=dev-db/postgresql-base-8.4.0
+	>=dev-db/postgresql-8.4.0
 	>=dev-libs/libxml2-2.6.18
 	>=dev-libs/libxslt-1.1"
 RDEPEND="${DEPEND}"
