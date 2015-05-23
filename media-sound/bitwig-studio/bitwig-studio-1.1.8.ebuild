@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -56,10 +56,14 @@ S=${WORKDIR}
 src_prepare() {
 	# Fix desktop file validation errors
 	sed -i \
-		-e 's/bitwig-studio.png$/bitwig-studio/g' \
-		-e 's/Multimedia$/Audio\;AudioVideo\;/g' \
+		-e 's/^\(Icon=.*\).png$/\1/g' \
+		-e 's/^\(Categories=\)Multimedia$/\1Audio\;AudioVideo\;/g' \
 		usr/share/applications/bitwig-studio.desktop
 
+	# Fix icon filename
+	mv \
+		'usr/share/icons/gnome/48x48/apps/Bitwig Studio.png' \
+		'usr/share/icons/gnome/48x48/apps/bitwig-studio.png'
 }
 
 src_install() {
@@ -94,7 +98,7 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 
 	if ! use libav; then
-		einfo "libav use flag not set. Bitwig Studio require the avprobe and avconv tools"
+		einfo "libav USE flag not set. Bitwig Studio require the avprobe and avconv tools"
 		einfo "for importing audio files."
 	fi
 }
